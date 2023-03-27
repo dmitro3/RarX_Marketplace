@@ -215,7 +215,7 @@ const Collection = ({
               </div>
             </div>
 
-            {slug != signer_address && !collection.isCollectionVerified && (
+            {slug == signer_address && !collection.isCollectionVerified && (
               <div className="flex justify-center align-middle mt-[-50px] mb-6">
                 <button
                   onClick={async () => (await checkGoerli())}
