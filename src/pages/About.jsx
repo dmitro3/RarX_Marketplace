@@ -98,7 +98,7 @@ const About = () => {
 
               <div className="mt-3 flex justify-center space-x-5">
                 <a
-                  href="https://www.linkedin.com/in/shravan-andoria-728290170/?originalSubdomain=in"
+                  href=""
                   target="_blank"
                   className="group"
                 >
