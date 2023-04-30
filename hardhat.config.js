@@ -8,7 +8,7 @@ module.exports = {
     mumbai: {
       chainId: 80001,
       accounts: [process.env.NEXT_PUBLIC_ACCOUNT_PRIVATE_KEY],
-      url: "https://matic-mumbai.chainstacklabs.com",
+      url: "https://polygon-mumbai.blockpi.network/v1",
     },
     zkEVM: {
       chainId: 1442,
