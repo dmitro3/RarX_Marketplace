@@ -196,7 +196,7 @@ const About = () => {
 
         <div className="container">
           <h2 className="mb-12 text-center font-display text-3xl text-jacarta-700 dark:text-white">
-            Team Behind RarX
+            Team Behind Boredem
           </h2>
           <div className="flex flex-wrap justify-center align-middle">
             <div className="rounded-2lg border border-jacarta-100 bg-white p-8 text-center transition-shadow hover:shadow-lg dark:border-jacarta-600 dark:bg-jacarta-700 m-4 w-[270px]">
