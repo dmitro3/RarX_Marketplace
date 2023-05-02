@@ -19,7 +19,7 @@ const Footer = () => {
               BOREDEM
             </Link>
             <p className="mb-6 dark:text-jacarta-300">
-              Create, sell and collect NFTs on RarX. Powered by
+              Create, sell and collect NFTs on Boredem. Powered by
               various technologies.
             </p>
             <div className="flex space-x-5">
@@ -139,11 +139,14 @@ const Footer = () => {
           </div>
         </div>
         <div className="flex flex-col items-center justify-between space-y-2 py-8 sm:flex-row sm:space-y-0">
-          <span className="text-sm dark:text-jacarta-400">
+          {/* <span className="text-sm dark:text-jacarta-400">
             &copy; 2023 RarX — Built during{" "}
             <a href="https://ethglobal.com/events/scaling2023" target="_blank" className="text-accent">
               Ethglobal Scaling ETH Hackathon
             </a>
+          </span> */}
+          <span className="text-sm dark:text-jacarta-400">
+            &copy; 2023 Boredem
           </span>
         </div>
       </div>
