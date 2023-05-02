@@ -409,12 +409,13 @@ const Navbar = ({
         <div className="flex items-center px-6 py-6 xl:px-24">
           {/* icon  */}
           <Link href="/" className="shrink-0">
-            <Image
+            {/* <Image
               src={rarxlogo}
               height={120}
               width={120}
               alt="RarX | NFT Marketplace"
-            />
+            /> */}
+            BOREDEM
           </Link>
 
           {/* search form  */}
@@ -615,7 +616,7 @@ const Navbar = ({
                   </ul>
                 </li>
 
-                <li className="js-nav-dropdown group relative">
+                {/* <li className="js-nav-dropdown group relative">
                   <Link
                     href="/About"
                     className="dropdown-toggle flex items-center justify-between py-3.5 font-display text-base text-jacarta-700 hover:text-accent focus:text-accent dark:text-white dark:hover:text-accent dark:focus:text-accent lg:px-5"
@@ -626,7 +627,7 @@ const Navbar = ({
                   >
                     About
                   </Link>
-                </li>
+                </li> */}
               </ul>
             </div>
 
