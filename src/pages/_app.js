@@ -36,6 +36,7 @@ export default function App({ Component, pageProps }) {
   const [search_data] = useState(nfts);
   const [artists, set_artists] = useState([]);
   const [chainId, set_current_chainId] = useState();
+  console.log({ chainIdMain, chainId });
 
   //COLLECTIONS INFORMATION
   const [all_collections, set_collections] = useState([]);
@@ -305,7 +306,7 @@ export default function App({ Component, pageProps }) {
     }
   };
 
-  // UMA Functions here 
+  // UMA Functions here
   const UMA_contract = () => {
     const contract = new ethers.Contract(
       uma_contract_factory,
@@ -315,7 +316,7 @@ export default function App({ Component, pageProps }) {
     return contract;
   };
 
-  // deploying UMA contract 
+  // deploying UMA contract
   const deploy_uma = async (collection_address) => {
     try {
       const contract = UMA_contract();
@@ -338,7 +339,7 @@ export default function App({ Component, pageProps }) {
     }
   };
 
-  // triggering requestData function 
+  // triggering requestData function
   const request_verification_UMA = async (collection_address) => {
     try {
       const db = polybase();
@@ -368,7 +369,7 @@ export default function App({ Component, pageProps }) {
     }
   };
 
-  // triggering uma settle 
+  // triggering uma settle
   const uma_settle_request = async (collection_address) => {
     try {
       const db = polybase();
@@ -395,7 +396,7 @@ export default function App({ Component, pageProps }) {
     }
   };
 
-  // getting status of uma 
+  // getting status of uma
   const uma_get_settle_status = async (collection_address) => {
     // console.log({ collection_address });
     if (!collection_address) return;
@@ -418,9 +419,9 @@ export default function App({ Component, pageProps }) {
     }
   };
 
-  // end of UMA functions 
+  // end of UMA functions
 
-  // polbase function start here 
+  // polbase function start here
   const fetch_collections_polybase = async (user_address) => {
     try {
       const db = polybase();
@@ -595,6 +596,7 @@ export default function App({ Component, pageProps }) {
           .call("executeSale", [db.collection("User").record(signer_address)]);
       }
       sendNFTSaleNoti(tokenId, listing_price);
+      router.reload();
     } catch (error) {
       console.log(error.message);
     }
@@ -660,24 +662,20 @@ export default function App({ Component, pageProps }) {
 
       // selecting destination domain, relayer fee and data
       if (domainID == "1735353714") {
-        const relayerFee = (
-          await sdkBase.estimateRelayerFee({
-            originDomain: polygonDomain,
-            destinationDomain: domainID
-          })
-        )
+        const relayerFee = await sdkBase.estimateRelayerFee({
+          originDomain: polygonDomain,
+          destinationDomain: domainID,
+        });
         relayerMain = relayerFee;
         chain_Image = "chains/goerli.png";
         chain_symbol = "ETH";
         chain_block = "https://goerli.etherscan.io/";
       }
       if (domainID == "9991") {
-        const relayerFee = (
-          await sdkBase.estimateRelayerFee({
-            originDomain: goerliDomain,
-            destinationDomain: domainID
-          })
-        )
+        const relayerFee = await sdkBase.estimateRelayerFee({
+          originDomain: goerliDomain,
+          destinationDomain: domainID,
+        });
         relayerMain = relayerFee;
         chain_Image = "chains/polygon.png";
         chain_symbol = "MATIC";
