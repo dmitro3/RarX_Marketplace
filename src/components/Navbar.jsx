@@ -409,13 +409,12 @@ const Navbar = ({
         <div className="flex items-center px-6 py-6 xl:px-24">
           {/* icon  */}
           <Link href="/" className="shrink-0">
-            {/* <Image
+            <Image
               src={rarxlogo}
               height={120}
               width={120}
               alt="RarX | NFT Marketplace"
-            /> */}
-            BOREDEM
+            />
           </Link>
 
           {/* search form  */}

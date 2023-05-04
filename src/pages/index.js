@@ -21,7 +21,7 @@ export default function Home({ all_collections, nfts, artists }) {
   return (
     <>
       <Head>
-        <title>Boredem - Advanced NFT Marketplace</title>
+        <title>RarX - Advanced NFT Marketplace</title>
         <meta
           name="description"
           content="First Cross-chain And Multi-chain Advanced NFT Marketplace With AI NFT Generation"
